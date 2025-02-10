@@ -5,56 +5,40 @@ const Home = () => {
     return (
         <div>
             {/* Animated Background Section */}
-            <motion.section 
-                className="bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url(${images?.image?.homeBg})` }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
-            >
+            <motion.section   className="bg-cover bg-center bg-no-repeat relative" style={{ backgroundImage: `url(${images?.image?.homeBg})` }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5, ease: "easeInOut" }}>
                 <div className="container mx-auto py-24 md:py-40">
                     {/* Small Title Animation */}
-                    <motion.h5 
-                        className="text-[#854ec8] inter text-center"
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1 }}
-                    >
+                    <motion.h5   className="text-[#854ec8] inter text-center" initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
                         👋 Hey there! We&apos;re Doodle
                     </motion.h5>
 
                     <div className="flex flex-col items-center justify-center space-y-8">
                         {/* Animated Heading */}
-                        <motion.h1 
-                            className="text-[#1b2a52] text-center text-4xl/[50px] md:text-6xl/[80px] font-bold space lin"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1, delay: 0.3 }}
-                        >
+                        <motion.h1    className="text-[#1b2a52] text-center text-4xl/[50px] md:text-6xl/[80px] font-bold space lin"  initial={{ opacity: 0, y: 20 }}  animate={{ opacity: 1, y: 0 }}  transition={{ duration: 1, delay: 0.3 }} >
                             Explore the Future with <br className="hidden md:block"/> 
                             PU <span className="bg-[#854ec8] text-white px-4 border rounded-full">AI Club</span>
                         </motion.h1>
 
                         {/* Animated Paragraph */}
-                        <motion.p 
-                            className="inter text-[#1b2a52] text-center px-1"
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1, delay: 0.6 }}
-                        >
+                        <motion.p   className="inter text-[#1b2a52] text-center px-1" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.6 }} >
                             The Presidency University AI Club is a hub for students to explore AI, Machine Learning,<br/>
                             and Data Science. Join us to learn, collaborate, and innovate! 🚀
                         </motion.p>
 
                         {/* Floating Robot Image */}
-                        <motion.img 
-                            src={images?.image?.form_shape} 
-                            alt="robot"
-                            initial={{ y: 10, opacity: 1 }}
-                            animate={{ y: -10, opacity: 1 }}
-                            transition={{ repeat: Infinity, repeatType: "reverse", duration: 2, ease: "easeInOut" }}
-                        />
+                        <motion.img   src={images?.image?.form_shape}   alt="robot" initial={{ y: 10, opacity: 1 }} animate={{ y: -10, opacity: 1 }} transition={{ repeat: Infinity, repeatType: "reverse", duration: 2, ease: "easeInOut" }} />
                     </div>
+
+                    {/* Shapes with Scroll Animation */}
+                    <motion.img  src={images?.image?.shape1}  alt="shape"  className="absolute top-44 left-80 hidden md:block" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -50 }} transition={{ duration: 1 }} />
+
+                    <motion.img  src={images?.image?.shape2}  alt="shape"  className="absolute top-80 left-[30rem] hidden md:block" whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} transition={{ duration: 1, delay: 0.2 }} />
+
+                    <motion.img  src={images?.image?.shape3}  alt="shape"  className="absolute top-[30rem] left-80 hidden md:block" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 50 }} transition={{ duration: 1, delay: 0.4 }} />
+
+                    <motion.img  src={images?.image?.shape4}  alt="shape"  className="absolute bottom-60 right-80 hidden md:block" whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} transition={{ duration: 1, delay: 0.6 }} />
+
+                    <motion.img  src={images?.image?.shape5}  alt="shape"  className="absolute bottom-0 right-0 hidden md:block" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -50 }} transition={{ duration: 1, delay: 0.8 }}/>
                 </div>
             </motion.section>
         </div>
