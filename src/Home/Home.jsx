@@ -1,9 +1,31 @@
 import images from "../assets/images";
 import { motion } from "framer-motion";
+import useSEO from "../Hooks/useSEO";
 
 const Home = () => {
+
+    useSEO({
+        title: "Presidency University AI Club - Leading Innovation in AI",
+        description:
+          "Welcome to Presidency University AI Club. Explore our innovative projects, research, and events in artificial intelligence. Join us to advance AI and be a part of our vibrant community.",
+        keywords:
+          "Presidency University, AI Club, Artificial Intelligence, AI Research, Innovation, University Club, AI Projects, puaic, Presidency University AI Club",
+        canonicalUrl: "https://pubaic.netlify.app/", // Replace with your actual domain URL
+        ogType: "website",
+        ogImage: "../assets/Images/logo.png", // Replace with your actual Open Graph image URL
+        twitterHandle: "@PresUniAIClub", // Replace with your club's Twitter handle if available
+        additionalMetaTags: {
+          author: "Presidency University AI Club",
+          robots: "index, follow",
+        },
+        additionalLinkTags: {
+          icon: "/public/favicon.ico", // Replace with your favicon URL
+        },
+      });
+
+
     return (
-        <div>
+        <div className="">
             {/* Animated Background Section */}
             <motion.section   className="bg-cover bg-center bg-no-repeat relative" style={{ backgroundImage: `url(${images?.image?.homeBg})` }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5, ease: "easeInOut" }}>
                 <div className="container mx-auto py-24 md:py-40">
