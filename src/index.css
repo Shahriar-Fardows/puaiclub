@@ -16,6 +16,12 @@
     font-weight: 700;
     font-style: normal;
   }
+.space-400{
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
 
   
 .roboto {
