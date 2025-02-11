@@ -14,7 +14,7 @@ const JoinUs = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1 }}
                     >
-                        <h5 className="text-[#854ec8] inter">Join Us</h5>
+                        <h5 className="text-[#854ec8] inter">Why Join Us</h5>
                         <h1 className="text-[#1b2a52] text-2xl md:text-5xl font-bold space">Join Our Community</h1>
                         <p className="inter text-[#79859b] px-1">Join the Presidency University AI Club to explore the world of AI, Machine Learning, and Data Science. Learn, collaborate, and innovate with us!</p>
 

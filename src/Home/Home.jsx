@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import useSEO from "../Hooks/useSEO";
 import About from "../Components/About/About";
 import JoinUs from "../Components/WhyJoinUs/JoinUs";
+import JoinFrom from "../Components/JoinFrom/JoinFrom";
 
 const Home = () => {
 
@@ -67,6 +68,7 @@ const Home = () => {
             </motion.section>
             <About />
             <JoinUs />
+            <JoinFrom />
         </>
     );
 };
