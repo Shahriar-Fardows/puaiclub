@@ -83,7 +83,7 @@ const JoinUs = () => {
                         </div>
                         <div>
                             <h1 className="text-[#1b2a52] space">Workshops</h1>
-                            <p className="inter">We organize workshops to teach <br /> AI concepts and tools.</p>
+                            <p className="inter">We organize workshops to  <br /> teach AI concepts and tools.</p>
                         </div>
                     </div>
                     <div className="hidden md:block">
