@@ -8,7 +8,7 @@ import LoadingSpinner from "../Shared/LoadingSpinner";
 const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 // Dynamically import the Root component
-const Root = lazy(() => wait(3000).then(() => import("../Root")));
+const Root = lazy(() => wait(1000).then(() => import("../Root")));
 
 const Routers = createBrowserRouter([
     {

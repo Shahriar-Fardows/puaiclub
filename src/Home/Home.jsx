@@ -1,7 +1,8 @@
 import images from "../assets/images";
 import { motion } from "motion/react";
 import useSEO from "../Hooks/useSEO";
-import About from "../Page/About/About";
+import About from "../Components/About/About";
+import JoinUs from "../Components/WhyJoinUs/JoinUs";
 
 const Home = () => {
 
@@ -65,6 +66,7 @@ const Home = () => {
                 </div>
             </motion.section>
             <About />
+            <JoinUs />
         </>
     );
 };
