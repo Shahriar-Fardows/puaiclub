@@ -1,6 +1,7 @@
 import images from "../assets/images";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import useSEO from "../Hooks/useSEO";
+import About from "../Page/About/About";
 
 const Home = () => {
 
@@ -31,14 +32,14 @@ const Home = () => {
                 <div className="container mx-auto py-24 md:py-40">
                     {/* Small Title Animation */}
                     <motion.h5   className="text-[#854ec8] inter text-center" initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-                        👋 Hey there! That is Presidency University AI Club
+                        👋 Hey there! That is Presidency <br className="block md:hidden"/> University AI Club
                     </motion.h5>
 
                     <div className="flex flex-col items-center justify-center space-y-8">
                         {/* Animated Heading */}
                         <motion.h1    className="text-[#1b2a52] text-center text-4xl/[50px] md:text-6xl/[80px] font-bold space lin"  initial={{ opacity: 0, y: 20 }}  animate={{ opacity: 1, y: 0 }}  transition={{ duration: 1, delay: 0.3 }} >
                             Explore the Future with <br className="hidden md:block"/> 
-                            PU <br className="block md:hidden"/> <span className="bg-[#854ec8] text-white px-4 border rounded-full">AI Club</span>
+                            PU <span className="bg-[#854ec8] text-white px-4 border rounded-full">AI Club</span>
                         </motion.h1>
 
                         {/* Animated Paragraph */}
@@ -63,6 +64,7 @@ const Home = () => {
                     <motion.img  src={images?.image?.shape5}  alt="shape"  className="absolute bottom-0 right-0 " whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -50 }} transition={{ duration: 1, delay: 0.8 }}/>
                 </div>
             </motion.section>
+            <About />
         </>
     );
 };
