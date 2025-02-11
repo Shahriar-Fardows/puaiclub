@@ -25,13 +25,13 @@ const Home = () => {
 
 
     return (
-        <div className="">
+        <>
             {/* Animated Background Section */}
             <motion.section   className="bg-cover bg-center bg-no-repeat relative" style={{ backgroundImage: `url(${images?.image?.homeBg})` }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5, ease: "easeInOut" }}>
                 <div className="container mx-auto py-24 md:py-40">
                     {/* Small Title Animation */}
                     <motion.h5   className="text-[#854ec8] inter text-center" initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-                        👋 Hey there! We&apos;re Doodle
+                        👋 Hey there! That is Presidency University AI Club
                     </motion.h5>
 
                     <div className="flex flex-col items-center justify-center space-y-8">
@@ -52,18 +52,18 @@ const Home = () => {
                     </div>
 
                     {/* Shapes with Scroll Animation */}
-                    <motion.img  src={images?.image?.shape1}  alt="shape"  className="absolute top-44 left-80 hidden md:block" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -50 }} transition={{ duration: 1 }} />
+                    <motion.img  src={images?.image?.shape1}  alt="shape"  className="absolute top-20 left-24 lg:top-44 lg:left-80 hidden md:block" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -50 }} transition={{ duration: 1 }} />
 
-                    <motion.img  src={images?.image?.shape2}  alt="shape"  className="absolute top-80 left-[30rem] hidden md:block" whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} transition={{ duration: 1, delay: 0.2 }} />
+                    <motion.img  src={images?.image?.shape2}  alt="shape"  className="absolute top-80 left-[70%] lg:left-[25%] hidden md:block" whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} transition={{ duration: 1, delay: 0.2 }} />
 
-                    <motion.img  src={images?.image?.shape3}  alt="shape"  className="absolute top-[30rem] left-80 hidden md:block" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 50 }} transition={{ duration: 1, delay: 0.4 }} />
+                    <motion.img  src={images?.image?.shape3}  alt="shape"  className="absolute top-[35rem] left-[10rem] lg:top-[30rem] lg:left-80 hidden md:block" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 50 }} transition={{ duration: 1, delay: 0.4 }} />
 
-                    <motion.img  src={images?.image?.shape4}  alt="shape"  className="absolute bottom-60 right-80 hidden md:block" whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} transition={{ duration: 1, delay: 0.6 }} />
+                    <motion.img  src={images?.image?.shape4}  alt="shape"  className="absolute right-[10%] lg:bottom-60 lg:right-80 hidden md:block" whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} transition={{ duration: 1, delay: 0.6 }} />
 
-                    <motion.img  src={images?.image?.shape5}  alt="shape"  className="absolute bottom-0 right-0 hidden md:block" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -50 }} transition={{ duration: 1, delay: 0.8 }}/>
+                    <motion.img  src={images?.image?.shape5}  alt="shape"  className="absolute bottom-0 right-0 " whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -50 }} transition={{ duration: 1, delay: 0.8 }}/>
                 </div>
             </motion.section>
-        </div>
+        </>
     );
 };
 
