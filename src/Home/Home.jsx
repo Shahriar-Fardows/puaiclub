@@ -38,7 +38,7 @@ const Home = () => {
                         {/* Animated Heading */}
                         <motion.h1    className="text-[#1b2a52] text-center text-4xl/[50px] md:text-6xl/[80px] font-bold space lin"  initial={{ opacity: 0, y: 20 }}  animate={{ opacity: 1, y: 0 }}  transition={{ duration: 1, delay: 0.3 }} >
                             Explore the Future with <br className="hidden md:block"/> 
-                            PU <span className="bg-[#854ec8] text-white px-4 border rounded-full">AI Club</span>
+                            PU <br className="block md:hidden"/> <span className="bg-[#854ec8] text-white px-4 border rounded-full">AI Club</span>
                         </motion.h1>
 
                         {/* Animated Paragraph */}
@@ -52,13 +52,13 @@ const Home = () => {
                     </div>
 
                     {/* Shapes with Scroll Animation */}
-                    <motion.img  src={images?.image?.shape1}  alt="shape"  className="absolute top-20 left-24 lg:top-44 lg:left-80 hidden md:block" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -50 }} transition={{ duration: 1 }} />
+                    <motion.img  src={images?.image?.shape1}  alt="shape"  className="absolute top-20 left-24 lg:top-[10%] lg:left-[10%] hidden md:block" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -50 }} transition={{ duration: 1 }} />
 
                     <motion.img  src={images?.image?.shape2}  alt="shape"  className="absolute top-80 left-[70%] lg:left-[25%] hidden md:block" whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} transition={{ duration: 1, delay: 0.2 }} />
 
                     <motion.img  src={images?.image?.shape3}  alt="shape"  className="absolute top-[35rem] left-[10rem] lg:top-[30rem] lg:left-80 hidden md:block" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 50 }} transition={{ duration: 1, delay: 0.4 }} />
 
-                    <motion.img  src={images?.image?.shape4}  alt="shape"  className="absolute right-[10%] lg:bottom-60 lg:right-80 hidden md:block" whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} transition={{ duration: 1, delay: 0.6 }} />
+                    <motion.img  src={images?.image?.shape4}  alt="shape"  className="absolute right-[10%] lg:bottom-[5%] lg:right-[20%] hidden md:block" whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} transition={{ duration: 1, delay: 0.6 }} />
 
                     <motion.img  src={images?.image?.shape5}  alt="shape"  className="absolute bottom-0 right-0 " whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -50 }} transition={{ duration: 1, delay: 0.8 }}/>
                 </div>
