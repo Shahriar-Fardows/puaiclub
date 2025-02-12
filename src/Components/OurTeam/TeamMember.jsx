@@ -1,137 +1,137 @@
-import PropTypes from "prop-types"
-import { motion } from "framer-motion"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Autoplay } from "swiper/modules"
-import { Mail } from "lucide-react"
+import PropTypes from "prop-types";
+import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import { Mail } from "lucide-react";
 
 // Import Swiper styles
-import "swiper/css"
-import "swiper/css/autoplay"
+import "swiper/css";
+import "swiper/css/autoplay";
 
 const founders = [
-    {
-        id: 1,
-        name: "Nazmul Hasan",
-        email: "hnazmul@pu.edu.bd",
-        position: "Moderator",
-        image: "../src/assets/Images/Nazmul_Hasan.png"
-      },
-      {
-        id: 2,
-        name: "Prof. Dr. Shahidul Islam Khan",
-        email: "Shahid@pu.edu.bd",
-        position: "Advisor",
-        image: "../src/assets/Images/ShahidulIslamKhan.jpg"
-      },
-]
+  {
+    id: 1,
+    name: "Nazmul Hasan",
+    email: "hnazmul@pu.edu.bd",
+    position: "Moderator",
+    image: "../src/assets/Images/Nazmul_Hasan.png",
+  },
+  {
+    id: 2,
+    name: "Prof. Dr. Shahidul Islam Khan",
+    email: "Shahid@pu.edu.bd",
+    position: "Advisor",
+    image: "../src/assets/Images/ShahidulIslamKhan.jpg",
+  },
+];
 
 const teamMembers = [
-    {
-        id: 3,
-        name: "Md Younus Akon",
-        email: "younusakon170@gmail.com",
-        position: "President",
-        image: "../src/assets/Images/aliul.jpeg"
-      },
-      {
-        id: 4,
-        name: "Fardin Hasan Mayen",
-        email: "fardinhasan.mayen@gmail.com",
-        position: "Vice President",
-        image: "../src/assets/Images/fardinhasan.jpg"
-      },
-      {
-        id: 5,
-        name: "Israt Jahan Munmun",
-        email: "201099038@student.presidency.edu.bd",
-        position: "Vice President",
-        image: "../src/assets/Images/girl.png"
-      },
-      {
-        id: 6,
-        name: "Abdullah Al-Amin",
-        email: "203034038@student.presidency.edu.bd",
-        position: "General Secretary",
-        image: "../src/assets/Images/boy.png"
-      },
-      {
-        id: 7,
-        name: "Mir Sabir Bin Abdullah",
-        email: "193102038@student.presidency.edu.bd",
-        position: "Joint-Secretary",
-        image: "../src/assets/Images/boy.png"
-      },
-      {
-        id: 8,
-        name: "Sadia Jannat Happy",
-        email: "251400038@student.presidency.edu.bd",
-        position: "Treasurer",
-        image: "../src/assets/Images/sadiajannat.jpeg"
-      },
-      {
-        id: 9,
-        name: "Tousif Ahamed",
-        email: "192254038@student.presidency.edu.bd",
-        position: "Deputy Treasurer",
-        image: "../src/assets/Images/boy.png"
-      },
-      {
-        id: 10,
-        name: "Tanha Tabassum Natasha",
-        email: "203121038@student.presidency.edu.bd",
-        position: "Organizing Secretary",
-        image: "../src/assets/Images/girl.png"
-      },
-      {
-        id: 11,
-        name: "Shahiduzzaman",
-        email: "222060038@student.presidency.edu.bd",
-        position: "Event Management Secretary",
-        image: "../src/assets/Images/shahiduzzaman.jpg"
-      },
-      {
-        id: 12,
-        name: "Rakibul Islam Eshty",
-        email: "222218038@student.presidency.edu.bd",
-        position: "Public Relation Secretary",
-        image: "../src/assets/Images/esthy.jpg"
-      },
-      {
-        id: 13,
-        name: "Tabassum Islam Arpa",
-        email: "221311038@student.presidency.edu.bd",
-        position: "Office Secretary",
-        image: "../src/assets/Images/girl.png"
-      },
-      {
-        id: 14,
-        name: "Md Sohel",
-        email: "231440038@student.presidency.edu.bd",
-        position: "Communication Secretary",
-        image: "../src/assets/Images/sohel.jpg"
-      },
-      {
-        id: 15,
-        name: "Fabiha Mukarrama Binte Mannan",
-        email: "232534038@student.presidency.edu.bd",
-        position: "Deputy Communication Secretary",
-        image: "../src/assets/Images/fabiha.jpeg"
-      },
-      {
-        id: 16,
-        name: "Morium",
-        email: "231239038@student.presidency.edu.bd",
-        position: "Head of Promotion",
-        image: "../src/assets/Images/moriom.jpg"
-      },
-      {
-        id: 17,
-        name: "Tasnim Khanam",
-        email: "232409040@student.presidency.edu.bd",
-        position: "Head of Recruitment",
-        image: "../src/assets/Images/tasnim.jpg"
-      }
-]
+  {
+    id: 3,
+    name: "Md Younus Akon",
+    email: "younusakon170@gmail.com",
+    position: "President",
+    image: "../src/assets/Images/aliul.jpeg",
+  },
+  {
+    id: 4,
+    name: "Fardin Hasan Mayen",
+    email: "fardinhasan.mayen@gmail.com",
+    position: "Vice President",
+    image: "../src/assets/Images/fardinhasan.jpg",
+  },
+  {
+    id: 5,
+    name: "Israt Jahan Munmun",
+    email: "201099038@student.presidency.edu.bd",
+    position: "Vice President",
+    image: "../src/assets/Images/girl.png",
+  },
+  {
+    id: 6,
+    name: "Abdullah Al-Amin",
+    email: "203034038@student.presidency.edu.bd",
+    position: "General Secretary",
+    image: "../src/assets/Images/boy.png",
+  },
+  {
+    id: 7,
+    name: "Mir Sabir Bin Abdullah",
+    email: "193102038@student.presidency.edu.bd",
+    position: "Joint-Secretary",
+    image: "../src/assets/Images/boy.png",
+  },
+  {
+    id: 8,
+    name: "Sadia Jannat Happy",
+    email: "251400038@student.presidency.edu.bd",
+    position: "Treasurer",
+    image: "../src/assets/Images/sadiajannat.jpeg",
+  },
+  {
+    id: 9,
+    name: "Tousif Ahamed",
+    email: "192254038@student.presidency.edu.bd",
+    position: "Deputy Treasurer",
+    image: "../src/assets/Images/boy.png",
+  },
+  {
+    id: 10,
+    name: "Tanha Tabassum Natasha",
+    email: "203121038@student.presidency.edu.bd",
+    position: "Organizing Secretary",
+    image: "../src/assets/Images/girl.png",
+  },
+  {
+    id: 11,
+    name: "Shahiduzzaman",
+    email: "222060038@student.presidency.edu.bd",
+    position: "Event Management Secretary",
+    image: "../src/assets/Images/shahiduzzaman.jpg",
+  },
+  {
+    id: 12,
+    name: "Rakibul Islam Eshty",
+    email: "222218038@student.presidency.edu.bd",
+    position: "Public Relation Secretary",
+    image: "../src/assets/Images/esthy.jpg",
+  },
+  {
+    id: 13,
+    name: "Tabassum Islam Arpa",
+    email: "221311038@student.presidency.edu.bd",
+    position: "Office Secretary",
+    image: "../src/assets/Images/girl.png",
+  },
+  {
+    id: 14,
+    name: "Md Sohel",
+    email: "231440038@student.presidency.edu.bd",
+    position: "Communication Secretary",
+    image: "../src/assets/Images/sohel.jpg",
+  },
+  {
+    id: 15,
+    name: "Fabiha Mukarrama Binte Mannan",
+    email: "232534038@student.presidency.edu.bd",
+    position: "Deputy Communication Secretary",
+    image: "../src/assets/Images/fabiha.jpeg",
+  },
+  {
+    id: 16,
+    name: "Morium",
+    email: "231239038@student.presidency.edu.bd",
+    position: "Head of Promotion",
+    image: "../src/assets/Images/moriom.jpg",
+  },
+  {
+    id: 17,
+    name: "Tasnim Khanam",
+    email: "232409040@student.presidency.edu.bd",
+    position: "Head of Recruitment",
+    image: "../src/assets/Images/tasnim.jpg",
+  },
+];
 
 const MemberCard = ({ member }) => (
   <div className="relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 group">
@@ -156,7 +156,7 @@ const MemberCard = ({ member }) => (
       </div>
     </div>
   </div>
-)
+);
 
 MemberCard.propTypes = {
   member: PropTypes.shape({
@@ -167,18 +167,27 @@ MemberCard.propTypes = {
     image: PropTypes.string.isRequired,
   }).isRequired,
   isFounder: PropTypes.bool,
-}
+};
 
 const TeamSection = () => {
   return (
-    <section className="w-full bg-gradient-to-b from-gray-50 to-white py-16 px-5">
-        {/* Small Title Animation */}
-        <motion.h5 className="text-[#854ec8] inter text-center" initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-              Team Members
-            </motion.h5>
-      <motion.h2 className="text-[#1b2a52] text-center text-4xl/[50px] md:text-6xl/[80px] font-bold space lin" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3 }}
+    <section id="our_team" className="w-full bg-gradient-to-b from-gray-50 to-white py-16 px-5">
+      {/* Small Title Animation */}
+      <motion.h5
+        className="text-[#854ec8] inter text-center"
+        initial={{ opacity: 0, y: -10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
       >
-        Meet Our AI Club  Team
+        Team Members
+      </motion.h5>
+      <motion.h2
+        className="text-[#1b2a52] text-center text-4xl/[50px] md:text-6xl/[80px] font-bold space lin"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.3 }}
+      >
+        Meet Our AI Club Team
       </motion.h2>
 
       {/* Founders */}
@@ -188,7 +197,7 @@ const TeamSection = () => {
             <motion.div
               key={founder.id}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="w-full sm:w-80"
             >
@@ -225,8 +234,7 @@ const TeamSection = () => {
         </Swiper>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default TeamSection
-
+export default TeamSection;
