@@ -66,7 +66,7 @@ const teamMembers = [
     name: "Sadia Jannat Happy",
     email: "251400038@student.presidency.edu.bd",
     position: "Treasurer",
-    image: "https://i.ibb.co.com/k2HT13bh/Shahidul-Islam-Khan.jpg",
+    image: "https://i.ibb.co.com/Kxs6X82z/sadiajannat.jpg",
   },
   {
     id: 9,
