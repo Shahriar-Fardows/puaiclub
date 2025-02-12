@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import ErrorPage from "../Error/ErrorPage";
 import Home from "../Home/Home";
 import LoadingSpinner from "../Shared/LoadingSpinner";
 
@@ -18,7 +17,6 @@ const Routers = createBrowserRouter([
             <Root />
           </Suspense>
         ),
-        errorElement: <ErrorPage />,
         children: [
             {
                 path: "/",
