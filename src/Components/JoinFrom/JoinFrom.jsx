@@ -71,6 +71,7 @@ const JoinForm = () => {
 
   return (
     <motion.section
+    id="joinFrom-section"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -83,7 +84,7 @@ const JoinForm = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Join Us Today</h2>
+          <h2 className="text-[#1b2a52] text-2xl md:text-5xl font-bold space">Join Us Today</h2>
           <p className="mt-4 text-xl text-gray-600">Shape Your Future with Just 50TK Registration Fee!</p>
         </motion.div>
 

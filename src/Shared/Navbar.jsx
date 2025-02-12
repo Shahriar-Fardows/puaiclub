@@ -1,14 +1,20 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';  // Import Link from react-scroll
 import images from '../assets/images';
 
 const Navbar = () => {
     const [isToggleOpen, setIsToggleOpen] = useState(false);
     const location = useLocation(); // Get current URL path
 
+    // Close the mobile menu when the location changes
+    useEffect(() => {
+        setIsToggleOpen(false);
+    }, [location]);
+
     const navLinks = [
         { path: "/", label: "Home" },
-        { path: "/about", label: "About" },
+        { path: "about-section", label: "About" },  // Smooth scroll to this section
         { path: "/our_team", label: "Our Team" },
         { path: "/event", label: "Event" },
         { path: "/contact_us", label: "Contact Us" },
@@ -19,13 +25,13 @@ const Navbar = () => {
             <div className="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
                 <nav className="flex h-[5.5rem] items-stretch justify-between font-medium text-slate-700">
                     {/* Logo */}
-                    <Link to="/" className="flex items-center gap-2 py-3 text-lg whitespace-nowrap focus:outline-none lg:flex-1">
-                        <img src={images?.image?.logo} alt="logo" className="w-20"/>
-                    </Link>
+                    <RouterLink to="/" className="flex items-center gap-2 py-3 text-lg whitespace-nowrap focus:outline-none lg:flex-1">
+                        <img src={images?.image?.logo} alt="logo" className="w-20" />
+                    </RouterLink>
 
                     {/* Mobile Menu Button */}
-                    <button 
-                        className={`relative order-10 block h-10 w-10 self-center lg:hidden ${isToggleOpen ? "open-class" : ""}`} 
+                    <button
+                        className={`relative order-10 block h-10 w-10 self-center lg:hidden ${isToggleOpen ? "open-class" : ""}`}
                         onClick={() => setIsToggleOpen(!isToggleOpen)}
                         aria-expanded={isToggleOpen}
                         aria-label="Toggle navigation"
@@ -41,23 +47,39 @@ const Navbar = () => {
                     <ul className={`absolute left-0 top-0 z-[-1] h-[28.5rem] w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-white/90 px-8 pb-12 pt-24 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0 lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0 lg:pt-0 lg:opacity-100 ${isToggleOpen ? "visible opacity-100 backdrop-blur-sm" : "invisible opacity-0"}`}>
                         {navLinks.map(({ path, label }) => (
                             <li key={path} role="none" className="flex items-stretch">
-                                <Link 
-                                    to={path}
-                                    className={`flex items-center gap-2 py-4 transition-colors duration-300 lg:px-8 ${
-                                        location.pathname === path ? "text-[#854ec8] font-semibold" : "hover:text-[#854ec8]"
-                                    }`}
-                                >
-                                    <span>{label}</span>
-                                </Link>
+                                {path === 'about-section' ? (
+                                    <ScrollLink
+                                        to="about-section"
+                                        smooth={true}
+                                        duration={500}
+                                        onClick={() => setIsToggleOpen(false)}  // Close the menu on link click
+                                        className={`flex items-center gap-2 py-4 transition-colors duration-300 lg:px-8 ${location.pathname === path ? "text-[#854ec8] font-semibold" : "hover:text-[#854ec8]"}`}
+                                    >
+                                        <span>{label}</span>
+                                    </ScrollLink>
+                                ) : (
+                                    <RouterLink
+                                        to={path}
+                                        onClick={() => setIsToggleOpen(false)}  // Close the menu on link click
+                                        className={`flex items-center gap-2 py-4 transition-colors duration-300 lg:px-8 ${location.pathname === path ? "text-[#854ec8] font-semibold" : "hover:text-[#854ec8]"}`}
+                                    >
+                                        <span>{label}</span>
+                                    </RouterLink>
+                                )}
                             </li>
                         ))}
                     </ul>
 
                     {/* Join With Us Button */}
                     <div className="flex items-center px-6 ml-auto lg:ml-0 lg:p-0">
+                        <ScrollLink to='joinFrom-section' smooth={true}
+                                        duration={500}
+                                        onClick={() => setIsToggleOpen(false)}  // Close the menu on link click
+                                       >
                         <button className="inline-flex items-center justify-center h-10 gap-2 px-5 text-sm font-medium tracking-wide text-white transition duration-300 rounded shadow-md whitespace-nowrap bg-[#854ec8] hover:bg-[#ad79e9] focus:outline-none">
                             <span>Join With Us</span>
                         </button>
+                        </ScrollLink>
                     </div>
                 </nav>
             </div>
