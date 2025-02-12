@@ -5,6 +5,7 @@ import About from "../Components/About/About";
 import JoinUs from "../Components/WhyJoinUs/JoinUs";
 import JoinFrom from "../Components/JoinFrom/JoinFrom";
 import TeamSection from "../Components/OurTeam/TeamMember";
+import ContactUs from "../Components/ContactUs/ContactUs";
 
 const Home = () => {
 
@@ -73,6 +74,7 @@ const Home = () => {
       <JoinUs />
       <JoinFrom />
       <TeamSection />
+      <ContactUs/>
     </>
   );
 };

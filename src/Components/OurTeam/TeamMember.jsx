@@ -140,7 +140,7 @@ const MemberCard = ({ member }) => (
       alt={member.name}
       className="w-full h-64 object-cover object-center"
     />
-    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
     {/* Position label (always visible, now at top-left) */}
     <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold bg-gray-200 text-gray-800">
@@ -148,7 +148,7 @@ const MemberCard = ({ member }) => (
     </div>
 
     {/* Info revealed on hover */}
-    <div className="absolute inset-0 flex flex-col justify-end p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <div className="absolute inset-0 flex flex-col justify-end p-6 text-white opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
       <h3 className="text-2xl font-bold mb-1">{member.name}</h3>
       <div className="flex items-center text-sm">
         <Mail className="w-4 h-4 mr-2" />
