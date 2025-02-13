@@ -139,7 +139,7 @@ const MemberCard = ({ member }) => (
     <img
       src={member.image || "/placeholder.svg"}
       alt={member.name}
-      className="w-full h-64 object-cover object-center"
+      className="w-full h-64 object-fill object-center"
     />
     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
